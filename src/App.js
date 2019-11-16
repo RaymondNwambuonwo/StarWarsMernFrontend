@@ -17,10 +17,11 @@ function App() {
             <Route path = "/Characters" component={Characters} />
             <Route path = "/Films" exact component={Films} />
             <Route path="/Starships" component={Starships} />
-</Router>   
+</Router>
+
   );
 }
-
+  
 
 
 export default App;
