@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import "./Characters.css";
 import axios from "axios";
 
 class Characters extends Component {
@@ -24,18 +25,16 @@ class Characters extends Component {
         return(
             <div>
               <h1>Characters</h1>
-              {
-                  this.state.Characters2.map(Character =>{
+              {this.state.Characters2.map((Character, index) =>{
                       console.log(Character)
                       return(
                           <div>
-                              <h1>{Character.name}</h1>
-                              <p>{Character.homeworld}</p>
+                              <img class="img-thumbnail" src={Character.image} alt=""/>
+                              <p key={index}>{Character.name}</p>
                           </div>
                       )
                   })
               }
-              {/* <button onClick={this.Charactery}>BUTTON</button> */}
             </div>
         
         )
