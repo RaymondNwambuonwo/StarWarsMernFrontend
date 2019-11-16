@@ -5,11 +5,11 @@ import {Link} from 'react-router-dom'
      render() {
          return(
              <div>
-                <nav class="nav nav-pills nav-fill">
-                        <Link to="/" class="nav-link">Home</Link>
-                        <Link to="/Characters" class="nav-link">Characters</Link>
-                        <Link to="/Films" class="nav-link">Films</Link>
-                        <Link to="/Starships" class="nav-link">Starships</Link>
+                <nav className="navbar navbar-dark bg-dark">
+                        <Link to="/" className="nav-link">Home</Link>
+                        <Link to="/Characters" className="nav-link">Characters</Link>
+                        <Link to="/Films" className="nav-link">Films</Link>
+                        <Link to="/Starships" className="nav-link">Starships</Link>
                        
             </nav>
              </div>

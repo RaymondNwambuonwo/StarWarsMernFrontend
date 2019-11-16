@@ -11,17 +11,19 @@ import Starships from "./Components/Starships/Starships";
 function App() {
   return (
    <Router>
+     <div className= "container">
         <Navbar />
         <br/>
             <Route path = "/" exact component={Home} />
             <Route path = "/Characters" component={Characters} />
             <Route path = "/Films" exact component={Films} />
             <Route path="/Starships" component={Starships} />
+    </div>
 </Router>
 
   );
 }
-  
+
 
 
 export default App;
