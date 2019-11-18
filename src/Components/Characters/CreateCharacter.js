@@ -11,23 +11,29 @@ class CreateCharacter extends Component {
       born: ""
 
     };
-    this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
+    // this.onChange = this.onChange.bind(this);
+    // this.onSubmit = this.onSubmit.bind(this);
   }
 
-  onChange = e => {
+  handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
     console.log(this.state);
   };
 
-  onSubmit = e => {
+  handleSubmit = e => {
     e.preventDefault();
-    console.log("form has been submitted");
+    // console.log("form has been submitted");
+    const character = {
+        name: this.state.name,
+        height: this.state.height,
+        gender: this.state.gender,
+        born: this.state.born
+    }
 
-    axios.post("http://localhost:3001/characters2", this.state)
-    .then(result => {
-      console.log(result);
-      this.props.closeSubmit();
+    axios.post(`http://localhost:3001/characters2`, { character })
+    .then(res => {
+      console.log(res);
+      console.log(res.data);
     })
     .catch(error => {
         console.log(error);
@@ -35,23 +41,23 @@ class CreateCharacter extends Component {
   };
 
   render() {
-    const { name, height, gender, born } = this.state;
+    // const { name, height, gender, born } = this.state;
     return (
         <div className="create">
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <label>Name:</label>
         <input
           type="text"
           name="name"
-          value={name}
-          onChange={this.onChange}
+        //   value={name}
+          onChange={this.handleChange}
         />
         <br />
         <label>Height:</label>
         <input
           type="text"
           name="height"
-          value={height}
+        //   value={height}
           onChange={this.onChange}
         />
         <br />
@@ -59,7 +65,7 @@ class CreateCharacter extends Component {
         <input
           type="text"
           name="gender"
-          value={gender}
+        //   value={gender}
           onChange={this.onChange}
         />
         <br />
@@ -67,7 +73,7 @@ class CreateCharacter extends Component {
         <input
           type="text"
           name="born"
-          value={born}
+        //   value={born}
           onChange={this.onChange}
         />
         <br />
