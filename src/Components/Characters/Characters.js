@@ -30,7 +30,7 @@ class Characters extends Component {
                       return(
                           <div>
                               <img class="img-thumbnail" src={Character.image} alt=""/>
-                              <p key={index}>{Character.name}</p>
+                              <p>{Character.name}</p>
                           </div>
                       )
                   })

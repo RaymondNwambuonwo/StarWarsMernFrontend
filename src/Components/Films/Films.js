@@ -24,7 +24,7 @@ class Films extends Component {
     render() {
         return(
             <div>
-              <h1>Films and shit</h1>
+              <h1>Films</h1>
               {
                   this.state.Films.map(film =>{
                       console.log(film)
@@ -36,7 +36,6 @@ class Films extends Component {
                       )
                   })
               }
-              {/* <button onClick={this.Filmer}>BUTTON</button> */}
             </div>
         
         )

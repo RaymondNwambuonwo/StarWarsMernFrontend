@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom'
                 <nav className="navbar navbar-dark bg-dark">
                         <Link to="/" className="nav-link">Home</Link>
                         <Link to="/Characters" className="nav-link">Characters</Link>
-                        <Link to="/Films" className="nav-link">Films</Link>
+                        <Link to="/CreateCharacter" className="nav-link">Create</Link>
                         <Link to="/Starships" className="nav-link">Starships</Link>
                        
             </nav>
