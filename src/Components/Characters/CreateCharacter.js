@@ -5,6 +5,7 @@ class CreateCharacter extends Component {
   constructor() {
     super();
     this.state = {
+      image: "",  
       name: "",
       height: "",
       gender: "",
@@ -15,15 +16,16 @@ class CreateCharacter extends Component {
     // this.onSubmit = this.onSubmit.bind(this);
   }
 
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+  handleChange = evt => {
+    this.setState({ [evt.target.name]: evt.target.value });
     console.log(this.state);
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
+  handleSubmit = evt => {
+    evt.preventDefault();
     // console.log("form has been submitted");
     const character = {
+        image: this.state.image,
         name: this.state.name,
         height: this.state.height,
         gender: this.state.gender,
