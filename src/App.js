@@ -5,8 +5,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import Characters from "./Components/Characters/Characters";
 import CreateCharacter from "./Components/Characters/CreateCharacter";
-// import Films from "./Components/Films/Films";
-import Starships from "./Components/Starships/Starships";
+import DeleteCharacter from "./Components/Characters/DeleteCharacter";
+// import Starships from "./Components/Starships/Starships";
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
             <Route path = "/" exact component={Home} />
             <Route path = "/Characters" component={Characters} />
             <Route path = "/CreateCharacter" exact component={CreateCharacter} />
-            <Route path="/Starships" component={Starships} />
+            <Route path="/DeleteCharacter" component={DeleteCharacter} />
    
 </Router>
 </div>

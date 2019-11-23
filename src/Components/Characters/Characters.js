@@ -28,8 +28,8 @@ class Characters extends Component {
               {this.state.Characters2.map((Character, index) =>{
                       console.log(Character)
                       return(
-                          <div>
-                              <img class="img-thumbnail" src={Character.image} alt=""/>
+                          <div key={Character._id}>
+                              <img className="img-thumbnail" src={Character.image} alt=""/>
                               <p>{Character.name}</p>
                           </div>
                       )

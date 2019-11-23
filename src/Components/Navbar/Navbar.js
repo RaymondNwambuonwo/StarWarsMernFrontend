@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom'
                         <Link to="/" className="nav-link">Home</Link>
                         <Link to="/Characters" className="nav-link">Characters</Link>
                         <Link to="/CreateCharacter" className="nav-link">Create</Link>
-                        <Link to="/Starships" className="nav-link">Starships</Link>
+                        <Link to="/DeleteCharacter" className="nav-link">Delete</Link>
                        
             </nav>
              </div>
