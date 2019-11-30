@@ -6,9 +6,9 @@ import {Link} from 'react-router-dom'
          return(
              <div>
                 <nav className="navbar navbar-dark bg-dark">
-                        <Link to="/" className="nav-link">Home</Link>
                         <Link to="/Characters" className="nav-link">Characters</Link>
                         <Link to="/CreateCharacter" className="nav-link">Create</Link>
+                        <Link to="/UpdateCharacter" className="nav-link">Update</Link>
                         <Link to="/DeleteCharacter" className="nav-link">Delete</Link>
                        
             </nav>

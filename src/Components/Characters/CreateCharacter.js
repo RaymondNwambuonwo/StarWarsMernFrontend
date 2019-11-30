@@ -6,7 +6,7 @@ class CreateCharacter extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      height: "",
+      height: 0,
       gender: "",
       image: "", 
       born: "",
@@ -24,54 +24,50 @@ class CreateCharacter extends Component {
 
   handleChange = (evt) => {
     evt.preventDefault()
-    this.setState({ [evt.target.name]: evt.target.value });
-    console.log(this.state);
+    console.log(evt.target.name)
+    if(evt.target.name == "height"){
+      let h = parseInt(evt.target.value)
+      this.setState({ [evt.target.name]: h });
+    }
+    else if(evt.target.name == "homeworld"){
+      let w = this.state.homeworld
+      w.push(evt.target.value)
+      this.setState({ [evt.target.name]: w });
+    }
+    else if(evt.target.name == "cybernetics"){
+      let c = this.state.cybernetics
+      c.push(evt.target.value)
+      this.setState({ [evt.target.name]: c });
+    } else{this.setState({ [evt.target.name]: evt.target.value });}
   };
 
   handleSubmit = (evt) => {
     evt.preventDefault();
-   const url = `http://localhost:3001/characters2`;
-    axios.post(url, {
-        gender: this.state.gender,
-        height: this.state.height,
-        born: this.state.born,
-        image: this.state.image, 
-        homeworld: this.state.homeworld,
-        bornLocation: this.state.bornLocation,
-        hair_color: this.state.hair_color,
-        eye_color: this.state.eye_color,
-        cybernetics: this.state.cybernetics,
-        name: this.state.name
-    })
+    console.log("ive been clicked", JSON.stringify(this.state))
+   const url = `http://localhost:3001/Characters2`;
+    axios.post(url, this.state)
     .then(res => {
-      console.log(res);
-      console.log(res.data);
-      console.log(this.state);
+      console.log('response:', res);
+      // redirect to characters page
+      this.props.history.push('/characters')
     })
     .catch(error => {
         console.log(error);
       });
   };
 
+
   render() {
-    const { height, gender, born, image, bornLocation, hair_color, eye_color, cybernetics, name, homeworld } = this.state;
+    // const { height, homeworld, gender, born, image, bornLocation, name, hair_color, eye_color, cybernetics } = this.state;
     return (
         <div className="create">
       <form onSubmit={this.handleSubmit}>
 
-      <label>Homeworld:</label>
-        <input
-          type="text"
-          name="homeworld"
-          value={homeworld}
-          onChange={this.handleChange}
-        />
-         <br />
         <label>Height:</label>
         <input
           type="text"
           name="height"
-          value={height}
+          // value={height}
           onChange={this.handleChange}
         />
         <br />
@@ -79,7 +75,7 @@ class CreateCharacter extends Component {
         <input
           type="text"
           name="gender"
-          value={gender}
+          // value={gender}
           onChange={this.handleChange}
         />
         <br />
@@ -87,7 +83,15 @@ class CreateCharacter extends Component {
         <input
           type="text"
           name="born"
-          value={born}
+          // value={born}
+          onChange={this.handleChange}
+        />
+        <br />
+        <label>Name:</label>
+        <input
+          type="text"
+          name="name"
+          // value={name}
           onChange={this.handleChange}
         />
         <br />
@@ -95,7 +99,7 @@ class CreateCharacter extends Component {
         <input
           type="text"
           name="image"
-          value={image}
+          // value={image} 
           onChange={this.handleChange}
         />
          <br />
@@ -103,7 +107,7 @@ class CreateCharacter extends Component {
         <input
           type="text"
           name="bornLocation"
-          value={bornLocation}
+          // value={bornLocation}
           onChange={this.handleChange}
         />
          <br />
@@ -111,7 +115,7 @@ class CreateCharacter extends Component {
         <input
           type="text"
           name="hair_color"
-          value={hair_color}
+          // value={hair_color}
           onChange={this.handleChange}
         />
          <br />
@@ -119,7 +123,7 @@ class CreateCharacter extends Component {
         <input
           type="text"
           name="eye_color"
-          value={eye_color}
+          // value={eye_color}
           onChange={this.handleChange}
         />
          <br />
@@ -127,18 +131,18 @@ class CreateCharacter extends Component {
         <input
           type="text"
           name="cybernetics"
-          value={cybernetics}
+          // value={cybernetics}
           onChange={this.handleChange}
         />
          <br />
-         <label>Name:</label>
+         <label>Homeworld:</label>
         <input
           type="text"
-          name="name"
-          value={name}
+          name="homeworld"
+          // value={homeworld} 
           onChange={this.handleChange}
         />
-        <br />
+         <br />
         <button type="submit">Submit</button>
       </form>
       </div>

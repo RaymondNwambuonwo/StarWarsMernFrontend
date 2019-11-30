@@ -6,16 +6,13 @@ class Characters extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            Characters2: []
+            characters: []
         }
-        // this.Charactery = this.Charactery.bind(this);
     }
     componentDidMount() {
         axios.get("http://localhost:3001/characters2")
         .then(res => {
-            console.log( "Success");
-            this.setState({ Characters2: res.data })
-            console.log(this.state.Characters2);
+            this.setState({ characters: res.data })
         })
         .catch(err => {
             console.log(err, "Something's wrong")
@@ -25,18 +22,24 @@ class Characters extends Component {
         return(
             <div>
               <h1>Characters</h1>
-              {this.state.Characters2.map((Character, index) =>{
+              <div className= "container2">
+              {this.state.characters.map((Character, index) =>{
                       console.log(Character)
                       return(
-                          <div key={Character._id}>
+                        <div key={Character._id}>
+                          <div className="card-deck">
+                              <div className="card">
                               <img className="img-thumbnail" src={Character.image} alt=""/>
-                              <p>{Character.name}</p>
+                              {/* <p className="card-text">{Character.name}</p> */}
+                              </div>
+                          </div>
+                          <p className="card-text">{Character.name}</p>
                           </div>
                       )
                   })
               }
+              </div>
             </div>
-        
         )
     }
 }

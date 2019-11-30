@@ -1,6 +1,13 @@
 .img-thumbnail{
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd;
     border-radius: 4px;
-    padding: 5px;
+    padding: 5px; */
     width: 150px;
+    height: 150px;
+}
+
+
+.container2{
+    display: flex;
+    flex-wrap: wrap;
 }
