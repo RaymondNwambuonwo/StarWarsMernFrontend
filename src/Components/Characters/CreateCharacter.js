@@ -44,7 +44,7 @@ class CreateCharacter extends Component {
   handleSubmit = (evt) => {
     evt.preventDefault();
     console.log("ive been clicked", JSON.stringify(this.state))
-   const url = `http://localhost:3001/Characters2`;
+   const url = `https://raymond-api.herokuapp.com/characters2`;
     axios.post(url, this.state)
     .then(res => {
       console.log('response:', res);

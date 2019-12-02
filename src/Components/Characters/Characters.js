@@ -10,7 +10,7 @@ class Characters extends Component {
         }
     }
     componentDidMount() {
-        axios.get("http://localhost:3001/characters2")
+        axios.get("https://raymond-api.herokuapp.com/characters2")
         .then(res => {
             this.setState({ characters: res.data })
         })

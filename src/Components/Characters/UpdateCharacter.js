@@ -34,7 +34,7 @@ class UpdateCharacter extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    axios.put(`http://localhost:3001/characters2/id/${this.state.id}`, 
+    axios.put(`https://raymond-api.herokuapp.com/characters2/id/${this.state.id}`, 
     this.state)
     .then(res => {
         console.log(res);
