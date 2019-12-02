@@ -2,7 +2,7 @@
 
 This project is a user interface for my [JSON API project](https://github.com/RaymondNwambuonwo/StarWarsMernBackend). 
 
-### Live URL: []()
+### Live URL: [https://practical-mcnulty-dbd32f.netlify.com/](https://practical-mcnulty-dbd32f.netlify.com/)
 
 ## Screenshot
 
