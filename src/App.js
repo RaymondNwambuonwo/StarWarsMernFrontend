@@ -7,12 +7,14 @@ import Characters from "./Components/Characters/Characters";
 import CreateCharacter from "./Components/Characters/CreateCharacter";
 import DeleteCharacter from "./Components/Characters/DeleteCharacter";
 import UpdateCharacter from "./Components/Characters/UpdateCharacter";
+import "./App.css";
 
 
 function App() {
   return (
     <div className= "container">
-      <h1>Intergalactic People</h1>
+      <h1 className= "star">Intergalactic People
+      </h1>
    <Router>
         <Navbar />
         <br/>

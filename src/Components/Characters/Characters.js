@@ -33,7 +33,7 @@ class Characters extends Component {
                               {/* <p className="card-text">{Character.name}</p> */}
                               </div>
                           </div>
-                          <p className="card-text">{Character.name}</p>
+                          <p id= "try" className="card-text">{Character.name}</p>
                           </div>
                       )
                   })
