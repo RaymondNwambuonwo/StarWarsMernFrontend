@@ -1,4 +1,17 @@
-h1 {
+h1,
+h2 {
   text-align: center;
+  color: aliceblue;
 }
 
+html,
+body {
+  background: url("./Components/Images/star.png") fixed;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

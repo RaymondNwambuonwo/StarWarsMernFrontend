@@ -1,23 +1,33 @@
-.img-thumbnail{
-    /* border: 1px solid #ddd;
+.img-thumbnail {
+  /* border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px; */
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
-
-.container2{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-/* 
-.card-columns {
-    @include media-breakpoint-only(lg) {
-      column-count: 4;
-    }
-    @include media-breakpoint-only(xl) {
-      column-count: 5;
-    }
-  } */
+
+p {
+  color: aliceblue;
+  text-align: center;
+}
+
+.create {
+  color: aliceblue;
+}
+
+.the-form {
+  color: aliceblue;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.the-form__input {
+}
