@@ -12,8 +12,9 @@
   justify-content: space-around;
 }
 
-p {
-  color: aliceblue;
+p,
+h3 {
+  color: black;
   text-align: center;
 }
 
@@ -30,4 +31,5 @@ p {
 }
 
 .the-form__input {
+  color: black;
 }

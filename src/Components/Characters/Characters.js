@@ -53,15 +53,38 @@ class Characters extends Component {
                   type="primary"
                   onClick={() => this.setModal1(Character)}
                 >
-                  <p className="card-text">{Character.name}</p>
+                  <div className="card-text">{Character.name}</div>
                 </Button>
                 <Modal
-                  title="charac"
+                  title={Character.name}
                   visible={this.state.modal1}
                   onOk={() => this.setState({ modal1: false })}
                   onCancel={() => this.setState({ modal1: false })}
                 >
-                  <div className="text-centered">{Character.name}</div>
+                  <div className="text-centered modtex">
+                    <h3>Description</h3>
+                    <p className="modal-paragraph">
+                      Height: {Character.height}
+                      <br />
+                      Homeworld: {Character.homeworld}
+                      <br />
+                      Gender: {Character.gender}
+                      <br />
+                      Birth: {Character.born}
+                      <br />
+                      Died: {Character.died}
+                      <br />
+                      Cybernetics: {Character.cybernetics}
+                      <br />
+                      Place of Birth: {Character.bornLocation}
+                      <br />
+                      Affiliations: {Character.affiliations}
+                      <br />
+                      Place of Death: {Character.diedLocation}
+                      <br />
+                      Wiki: {Character.wiki}
+                    </p>
+                  </div>
                 </Modal>
               </div>
             );
