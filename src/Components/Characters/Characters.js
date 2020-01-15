@@ -34,7 +34,7 @@ class Characters extends Component {
   render() {
     return (
       <div>
-        <h1>Characters</h1>
+        <h1>Soilders</h1>
         <div className="container2">
           {this.state.characters.map((Character, index) => {
             console.log(Character);

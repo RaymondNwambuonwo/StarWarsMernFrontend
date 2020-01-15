@@ -60,7 +60,7 @@ class CreateCharacter extends Component {
     // const { height, homeworld, gender, born, image, bornLocation, name, hair_color, eye_color, cybernetics } = this.state;
     return (
       <div className="create">
-        <h2>Create Character</h2>
+        <h2>Sign Up Form</h2>
         <form className="the-form" onSubmit={this.handleSubmit}>
           <label>Height:</label>
           <input

@@ -51,7 +51,7 @@ class UpdateCharacter extends Component {
     // const { id, name, height, gender, homeworld } = this.state;
     return (
       <div className="create">
-        <h2>Update Character</h2>
+        <h2>Update Soilder</h2>
         <form className="the-form" onSubmit={this.handleSubmit}>
           <label>Character ID:</label>
           <input

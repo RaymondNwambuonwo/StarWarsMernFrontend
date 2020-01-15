@@ -39,7 +39,7 @@ class DeleteCharacter extends Component {
       <div>
         <form className="the-form" onSubmit={this.handleSubmit}>
           <label>
-            Character Name:
+            Soilder Name:
             <input
               className="the-form__input"
               type="text"

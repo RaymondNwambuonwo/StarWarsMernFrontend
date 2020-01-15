@@ -10,16 +10,16 @@ class Navbar extends Component {
             Home
           </Link>
           <Link to="/Characters" className="nav-link">
-            Characters
+            Soilders
           </Link>
           <Link to="/CreateCharacter" className="nav-link">
-            Create
+            Sign Up
           </Link>
           <Link to="/UpdateCharacter" className="nav-link">
-            Update
+            Update Form
           </Link>
           <Link to="/DeleteCharacter" className="nav-link">
-            Delete
+            Delete Soilder
           </Link>
         </nav>
       </div>
