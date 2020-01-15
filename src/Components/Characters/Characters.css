@@ -13,9 +13,11 @@
 }
 
 p,
-h3 {
+h3,
+h1 {
   color: black;
   text-align: center;
+  font-family: "Orbitron", sans-serif;
 }
 
 .create {
@@ -32,4 +34,8 @@ h3 {
 
 .the-form__input {
   color: black;
+}
+
+button {
+  background-color: black;
 }

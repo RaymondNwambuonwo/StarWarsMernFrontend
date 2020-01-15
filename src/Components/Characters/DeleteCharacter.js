@@ -6,7 +6,7 @@ class DeleteCharacter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: ""
+      name: ""
     };
   }
   handleChange = event => {
@@ -20,12 +20,13 @@ class DeleteCharacter extends Component {
 
     axios
       .delete(
-        `https://raymond-api.herokuapp.com/characters2/id/${this.state.id}`,
+        `https://raymond-api.herokuapp.com/characters2/name/${this.state.name}`,
         this.state
       )
       .then(res => {
         console.log(res);
         console.log(res.data);
+        this.props.history.push("/characters");
       })
       .catch(err => {
         console.log(err);
@@ -38,12 +39,12 @@ class DeleteCharacter extends Component {
       <div>
         <form className="the-form" onSubmit={this.handleSubmit}>
           <label>
-            Character ID:
+            Character Name:
             <input
               className="the-form__input"
               type="text"
-              name="id"
-              placeholder="ID"
+              name="name"
+              placeholder="Name"
               onChange={this.handleChange}
             />
           </label>
