@@ -15,7 +15,7 @@ function App() {
         <h1 className="star">Intergalactic People</h1>
         <Navbar />
         <br />
-        <Route path="/" exact component={Characters} />
+        <Route path="/" exact component={Home} />
         <Route path="/Characters" component={Characters} />
         <Route path="/CreateCharacter" exact component={CreateCharacter} />
         <Route path="/DeleteCharacter" component={DeleteCharacter} />
