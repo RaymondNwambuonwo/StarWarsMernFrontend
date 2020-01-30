@@ -4,9 +4,17 @@ This project is a user interface for my [JSON API project](https://github.com/Ra
 
 ### Live URL: [Click Here](https://intergalacticpeople.netlify.com)
 
-## Screenshot
+## Example 
 
-<img width="1395" alt="Screen Shot 2019-12-01 at 9 44 34 PM" src="https://user-images.githubusercontent.com/54545904/69926801-daa8fa80-1483-11ea-9299-ce7f2a1b1a8e.png">
+<img width="1434" alt="Screen Shot 2020-01-30 at 10 30 03 AM" src="https://user-images.githubusercontent.com/54545904/73463748-c716f480-434b-11ea-888c-7afc940051a8.png">
+
+<img width="1438" alt="Screen Shot 2020-01-30 at 10 30 17 AM" src="https://user-images.githubusercontent.com/54545904/73463750-c716f480-434b-11ea-80d9-85a9a7a8328a.png">
+
+<img width="1436" alt="Screen Shot 2020-01-30 at 10 30 35 AM" src="https://user-images.githubusercontent.com/54545904/73463751-c716f480-434b-11ea-86a4-fc9ce5383d88.png">
+
+<img width="1435" alt="Screen Shot 2020-01-30 at 10 30 46 AM" src="https://user-images.githubusercontent.com/54545904/73463752-c7af8b00-434b-11ea-8552-34940d4caca6.png">
+
+<img width="1427" alt="Screen Shot 2020-01-30 at 10 30 54 AM" src="https://user-images.githubusercontent.com/54545904/73463753-c7af8b00-434b-11ea-9adc-11abb1018c01.png">
 
 ## Installation Instructions
 
